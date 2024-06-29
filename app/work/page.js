@@ -19,18 +19,18 @@ function Page() {
 							animate="show"
 							exit="hidden"
 							className="h2">
-							My work <span className="text-accent">.</span>
+							Мои работы <span className="text-accent">.</span>
 						</motion.h2>
 						<motion.p 
 							variants={fadeIn('up', 0.4)}
 							initial="hidden"
 							animate="show"
 							exit="hidden"
-							className="mb-4 max-w-[400px] mx-auto">
-							ex fugiat nostrud nulla ex irure nulla consectetur ea occaecat proident fugiat nisi consequat officia lorem. 
-							aliqua eiusmod commodo elit sit in officia sed voluptate Duis sint cupidatat consequat ea cillum et eiusmod voluptate Excepteur. 
-							nulla deserunt voluptate cupidatat id nulla lorem sed mollit non amet nulla irure elit cillum pariatur anim. 
-							ea do labore ullamco occaecat et commodo exercitation laboris labore deserunt Duis tempor lorem ex aliqua. 
+							className="mb-4 max-w-[400px] hidden xl:block">
+							В данном разделе представлены мои работы, которые я выполнил за последнее время. 
+							Я подобрал на мой взгяд наиболее интересные и качественные проекты, из разных областей и тематик. 
+							Чтобы вы могли подобрать наиболее подходящий вариант, который будет соответствовать вашей тематики.
+							И использовать его в качестве примера для определения напрявления в разработке функционала вашего будушего веб-приложения.
 						</motion.p>
 					</div>
 					<motion.div

@@ -19,18 +19,17 @@ function Page() {
 							animate="show"
 							exit="hidden"
 							className="h2">
-							My services <span className="text-accent">.</span>
+						  Мои услуги<span className="text-accent">.</span>
 						</motion.h2>
 						<motion.p 
 							variants={fadeIn('up', 0.4)}
 							initial="hidden"
 							animate="show"
 							exit="hidden"
-							className="mb-4 max-w-[400px] mx-auto">
-							ex fugiat nostrud nulla ex irure nulla consectetur ea occaecat proident fugiat nisi consequat officia lorem. 
-							aliqua eiusmod commodo elit sit in officia sed voluptate Duis sint cupidatat consequat ea cillum et eiusmod voluptate Excepteur. 
-							nulla deserunt voluptate cupidatat id nulla lorem sed mollit non amet nulla irure elit cillum pariatur anim. 
-							ea do labore ullamco occaecat et commodo exercitation laboris labore deserunt Duis tempor lorem ex aliqua. 
+							className="mb-4 max-w-[400px] hidden xl:block">
+							Готов взятся за реализацию веб приложения любой сложности, при этом готов предоставить Вам данную услугу "под ключ"
+							как говорится от макета до деплоя на сервер. Так  же в последствии готов поддерживать и развивать данное приложение,
+							исправлять баги и добавлять новый функционал. При необходимости готов привлечь к работе дополнительных специалистов. 
 						</motion.p>
 					</div>
 					<motion.div
@@ -38,7 +37,7 @@ function Page() {
 						initial="hidden"
 						animate="show"
 						exit="hidden" 
-						className="w-full xl:max-w-[65%]">
+						className="w-full xl:max-w-[65%] h-[420px]">
 						<ServiceSlider />
 					</motion.div>
 				</div>

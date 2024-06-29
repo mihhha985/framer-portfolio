@@ -1,43 +1,6 @@
 "use client"
-import {
-  RxCrop,
-  RxPencil2,
-  RxDesktop,
-  RxReader,
-  RxRocket,
-	RxArrowTopRight,
-} from "react-icons/rx";
-
-
-// data
-const serviceData = [
-  {
-    icon: <RxCrop />,
-    title: 'Branding',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    icon: <RxPencil2 />,
-    title: 'Design',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    icon: <RxDesktop />,
-    title: 'Development',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    icon: <RxReader />,
-    title: 'Copywriting',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    icon: <RxRocket />,
-    title: 'SEO',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-];
-
+import { serviceDataRu } from "@/data/serviceData";
+import { RxArrowTopRight } from "react-icons/rx";
 import { FreeMode, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -53,6 +16,10 @@ const ServiceSlider = () => {
 					spaceBetween: 15,
 				},
 			640: {
+					slidesPerView: 2,
+					spaceBetween: 15,
+				},
+			768: {
 					slidesPerView: 3,
 					spaceBetween: 15,
 				},
@@ -60,10 +27,10 @@ const ServiceSlider = () => {
 			modules={[FreeMode, Pagination]} 
 			freeMode={true} 
 			pagination={{"clickable": true}} 
-			className="h-[240px] sm:h-[340px]">
-			{serviceData.map((service, index) => (
+			className="h-[280px] sm:h-[360px]">
+			{serviceDataRu.map((service, index) => (
 				<SwiperSlide key={index}>
-					<div className="bg-[rgba(65,47,123,0.1)] h-max rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 
+					<div className="bg-[rgba(65,47,123,0.1)] h-[240px] sm:h-[320px] rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 
 						group cursor-pointer hover:bg-[rgba(89,65,169,0.2)] transition-all duration-300">
 						<div className="text-4xl text-accent mb-4">
 							{service.icon}
@@ -72,7 +39,7 @@ const ServiceSlider = () => {
 							<h3 className="mb-2 text-lg">{service.title}</h3>
 							<p className="max-w-[350px] leading-normal">{service.description}</p>
 						</div>
-						<div className="text-3xl">
+						<div className="text-3xl mt-auto">
 							<RxArrowTopRight className="group-hover:rotate-45 group-hover:text-accent transition-all duration-300"/>
 						</div>	
 					</div>
