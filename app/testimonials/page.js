@@ -6,9 +6,9 @@ import {fadeIn} from "@/variants";
 
 function Page() {
 	return ( 
-		<div className="h-full bg-primary/30 xl:py-32 text-center">
+		<div className="h-full bg-primary/30 py-32 text-center">
 			<Circles />
-			<div className="container mx-auto h-full flex flex-col justify-center">
+			<div className="container mx-auto h-full flex flex-col justify-start sm:justify-center">
 				<motion.h2
 					variants={fadeIn('up', 0.2)}
 					initial="hidden"
