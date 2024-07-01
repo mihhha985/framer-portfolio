@@ -8,7 +8,7 @@ import { fadeIn } from "@/variants";;
 export default function Home() {
   return (
     <div className="bg-primary/60 h-full py-32">
-			<div className="flex flex-col sm:pt-0 xl:pt-40 xl:text-left mx-auto h-full container text-center">
+			<div className="flex flex-col justify-between xl:justify-center xl:text-left mx-auto h-full container text-center">
 				<h1 className="h1">Разработка сайтов и <br />
 					вэб-приложений <span className="text-accent ml-2">под ключ</span>
 				</h1>

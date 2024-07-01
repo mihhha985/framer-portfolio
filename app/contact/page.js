@@ -64,7 +64,7 @@ function Page() {
 						initial="hidden"
 						animate="show"
 						exit="hidden"
-						className="h2 text-center mb-12">
+						className="h2 text-center mb-6 sm:mb-12">
 						Задать<span className="text-accent"> вопрос.</span>
 					</motion.h2>
 					<motion.form

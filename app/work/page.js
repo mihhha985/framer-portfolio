@@ -8,7 +8,7 @@ import {fadeIn} from "@/variants";
 
 function Page() {
 	return ( 
-		<div className="h-full w-full bg-primary/30 py-32">
+		<div className="h-full w-full bg-primary/30 py-32 flex flex-col justify-center">
 			<Circles />
 			<div className="container mx-auto">
 				<div className="flex flex-col xl:flex-row gap-x-8">
