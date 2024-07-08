@@ -3,22 +3,22 @@ const workSlides = {
     {
       images: [
         {
-          title: 'Интернет-магазин Geekom',
+          title: 'Online Store Geekom',
           path: '/thumb1.jpg',
 					link: 'https://www.geekom.ru/',
 				},
         {
-          title: 'Интернет-магазин Street Beat',
+          title: 'Online Store Street Beat',
           path: '/thumb2.jpg',
 					link: 'https://street-beat.ru/',
         },
         {
-          title: 'Интернет-магазин Husband',
+          title: 'Online Store Husband',
           path: '/thumb3.jpg',
 					link: 'https://husbandrnd.ru/',
         },
         {
-          title: 'Свадебный салон Mary Trufel',
+          title: 'Wedding salon Mary Trufel',
           path: '/thumb4.jpg',
 					link: 'https://rostov.marytrufel.ru/',
         },
@@ -27,22 +27,22 @@ const workSlides = {
     {
       images: [
         {
-          title: 'Сервис психологической помощи Душа',
+          title: 'Psychological help service Dusha',
           path: '/thumb4.jpg',
 					link: 'https://soulpsy.world/',
         },
         {
-          title: 'Клининговая компания Домовенок',
+          title: 'Cleaning company Domovenok',
           path: '/thumb1.jpg',
 					link: 'https://www.domovenok.ru/',
         },
         {
-          title: 'Строительная компания Альмистрой',
+          title: 'Construction company Almistroi',
           path: '/thumb2.jpg',
 					link: 'https://almistroy.ru/',
         },
         {
-          title: 'Стоматологическая клиника Dr. Kogina',
+          title: 'Dental clinic Dr. Kogina',
           path: '/thumb3.jpg',
 					link: 'https://drkogina.ru/',
         },
@@ -62,7 +62,6 @@ import 'swiper/css/pagination';
 import {BsArrowRight} from 'react-icons/bs';
 import Image from 'next/image';
 import Link from 'next/link';
-import { list } from 'postcss';
 
 const WorkSlider = () => {
   return (

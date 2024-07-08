@@ -17,8 +17,8 @@ import {
 
 import { DiYii } from "react-icons/di";
 
-export const aboutDataEn = [
-  {
+export const aboutData = [
+	{
     title: 'skills',
     info: [
       {
@@ -46,119 +46,41 @@ export const aboutDataEn = [
       },
     ],
   },
-  {
+	{
     title: 'awards',
     info: [
       {
-        title: 'Webby Awards - Honoree',
-        stage: '2011 - 2012',
-      },
-      {
-        title: 'Adobe Design Achievement Awards - Finalist',
-        stage: '2009 - 2010',
-      },
-    ],
-  },
-  {
-    title: 'experience',
-    info: [
-      {
-        title: 'UX/UI Designer - XYZ Company',
-        stage: '2012 - 2023',
-      },
-      {
-        title: 'Web Developer - ABC Agency',
-        stage: '2010 - 2012',
-      },
-      {
-        title: 'Intern - DEF Corporation',
-        stage: '2008 - 2010',
-      },
-    ],
-  },
-  {
-    title: 'credentials',
-    info: [
-      {
-        title: 'Web Development - ABC University, LA, CA',
-        stage: '2011',
-      },
-      {
-        title: 'Computer Science Diploma - AV Technical Institute',
-        stage: '2009',
-      },
-      {
-        title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
-        stage: '2006',
-      },
-    ],
-  },
-];
-
-export const aboutDataRu = [
-	{
-    title: 'стэк',
-    info: [
-      {
-        title: 'Frontend Development',
-        icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-        ],
-      },
-			{
-        title: 'Backend Development',
-        icons: [
-					<SiPhp />,
-					<DiYii />,
-					<FaNodeJs />,
-					<SiNestjs />,
-        ],
-      },
-      {
-        title: 'UI/UX Design',
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
-      },
-    ],
-  },
-	{
-    title: 'награды',
-    info: [
-      {
-        title: 'Турнир Архемеда - Победитель',
+        title: 'Archemeda Tournament - Winner',
         stage: '2003 - 2004',
       },
       {
-        title: 'Awwwards - Лауреат',
+        title: 'Awwwards - Laureate',
         stage: '2018 - 2019',
       },
     ],
   },
 	{
-    title: 'опыт работы',
+    title: 'experience',
     info: [
       {
-        title: 'Frontend developer - Геномед',
+        title: 'Frontend developer - Genomed',
         stage: '2016 - 2018',
       },
       {
-        title: 'Fullstack developer - Билайн',
+        title: 'Fullstack developer - Beeline',
         stage: '2018 - 2022',
       },
       {
-        title: 'Fullstack developer - Тинькофф',
+        title: 'Fullstack developer - Tinkoff',
         stage: '2022 - 2024',
       },
     ],
   },
 	{
-    title: 'образование',
+    title: 'education',
     info: [
       {
-        title: 'Программирование и инф. тех. - СПбГУ',
+        title: 'Programming and inf.tech. - SPBGU',
         stage: '2005 - 2010',
       },
       {

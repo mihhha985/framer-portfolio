@@ -3,8 +3,11 @@ import Circles from "@/components/Circles";
 import TestimonialSlider from "@/components/TestimonialSlider";
 import {motion} from "framer-motion";
 import {fadeIn} from "@/variants";
+import { useStore } from "@/state/lanState";
 
 function Page() {
+	const isEn = useStore(state => state.isEn);
+
 	return ( 
 		<div className="h-full bg-primary/30 py-32 text-center">
 			<Circles />
@@ -15,7 +18,12 @@ function Page() {
 					animate="show"
 					exit="hidden" 
 					className="h2 mb-8 xl:mb-0">
-					Что говорят мои <span className="text-accent">клиенты</span>.
+					{isEn 
+						? 
+						<b>Whats my <span class="text-accent">clients</span> say.</b> 
+						: 
+						<b>Что говорят мои <span className="text-accent">клиенты</span>.</b>
+					}
 				</motion.h2>
 				<motion.div
 					variants={fadeIn('up', 0.4)}

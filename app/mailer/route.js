@@ -17,11 +17,7 @@ export async function POST(request) {
 			from: 'mihhha985@yandex.ru',
 			to: 'biketoff.m@yandex.ru',
 			subject: data.subject,
-			text: `
-				Имя: ${data.name}
-				Email: ${data.email}
-				---------------
-				${data.text}`
+			text: `Имя: ${data.name} \nEmail: ${data.email} \n--------------- \n${data.text}`
 	};
 
 	transporter.sendMail(mailOptions, (error, info) => {

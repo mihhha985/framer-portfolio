@@ -41,11 +41,18 @@
   .input {
     @apply w-full h-[52px] rounded-lg pl-6 capitalize;
   }
-  .input,
-  .textarea {
+  .input {
     @apply bg-transparent outline-none focus:ring-1 focus:ring-accent border border-white/20 placeholder:text-white/30 placeholder:font-light;
   }
   .textarea {
-    @apply w-full h-[180px] p-6 capitalize rounded-lg resize-none;
+    @apply block w-full h-[180px] p-6 rounded-lg resize-none bg-transparent outline-none focus:ring-1 focus:ring-accent border border-white/20 placeholder:text-white/30 placeholder:font-light;
   }
+
+	.input-box{
+		@apply relative pb-5; 
+	}
+
+	.input-error{
+		@apply absolute bottom-[2px] left-[2px] text-red-600 text-xs;
+	}
 }

@@ -5,9 +5,11 @@ import Circles from "@/components/Circles";
 import CountUp from 'react-countup';
 import {motion} from "framer-motion";
 import {fadeIn} from "@/variants";
-import {aboutDataRu} from "@/data/aboutData";
+import {aboutData} from "@/data/aboutData";
+import { useStore } from "@/state/lanState";
 
 function Page() {
+	const isEn = useStore((state) => state.isEn);
 	const [index, setIndex] = useState(0);
 
 	return (
@@ -24,7 +26,12 @@ function Page() {
 						animate="show"
 						exit="hidden"
 						className="h1">
-						Мои достижения как <span className="text-accent">разработчика</span> 
+						{isEn 
+							? 
+							<b>My achievements as a <span className="text-accent">developer</span></b>
+							: 
+							<b>Мои достижения как <span className="text-accent">разработчика</span></b>
+						}
 					</motion.h2>
 					<motion.p 
 						variants={fadeIn('right', 0.4)} 
@@ -32,9 +39,16 @@ function Page() {
 						animate="show"
 						exit="hidden"
 						className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 hidden md:block">
-						Свой путь я начинал с простых сайтов на HTML и CSS, при этом постоянно учился новым технологиям и методам разработки. 
-						Сейчас я могу с уверенностью сказать, что могу создать любой сайт или приложение, которое вам нужно. 
-						За время работы я получил множество наград и дипломов, которые подтверждают мою квалификацию как програмиста. 
+						{isEn 
+							? 
+							`My path began with simple sites on HTML and CSS, while constantly learning new technologies and development methods.
+							Now I can confidently say that I can create any site or application you need.
+							During my work, I have received many awards and diplomas that confirm my qualifications as a programmer.`
+							:
+							`Свой путь я начинал с простых сайтов на HTML и CSS, при этом постоянно учился новым технологиям и методам разработки. 
+							Сейчас я могу с уверенностью сказать, что могу создать любой сайт или приложение, которое вам нужно. 
+							За время работы я получил множество наград и дипломов, которые подтверждают мою квалификацию как програмиста.`
+						}
 					</motion.p>
 					<motion.div
 						variants={fadeIn('right', 0.6)} 
@@ -48,28 +62,34 @@ function Page() {
 									<CountUp start={0} end={10} duration={5} />
 									+
 								</div>
-								<div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">Годы опыта в разработке</div>
+								<div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+									{isEn ? `Years of experience` : `Годы опыта в разработке`}</div>
+							</div>
+							<div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+								<div className="text-2x xl:text-4xl font-extrabold text-accent mb-2">
+									<CountUp start={0} end={120} duration={5} />
+									+
+								</div>
+								<div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+									{isEn	? `SATISFIED CLIENTS` : `Довольных клиентов`}</div>
 							</div>
 							<div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
 								<div className="text-2x xl:text-4xl font-extrabold text-accent mb-2">
 									<CountUp start={0} end={250} duration={5} />
 									+
 								</div>
-								<div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">Довольных клиентов</div>
+								<div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+									{isEn ? `Finished projects` : `Законченные проекты`}
+								</div>
 							</div>
 							<div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
 								<div className="text-2x xl:text-4xl font-extrabold text-accent mb-2">
-									<CountUp start={0} end={650} duration={5} />
+									<CountUp start={0} end={4} duration={5} />
 									+
 								</div>
-								<div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">Законченные проекты</div>
-							</div>
-							<div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-								<div className="text-2x xl:text-4xl font-extrabold text-accent mb-2">
-									<CountUp start={0} end={8} duration={5} />
-									+
+								<div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+									{isEn ? `wining awards` : `Полученные награды`}
 								</div>
-								<div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">Полученные награды</div>
 							</div>
 						</div>
 					</motion.div>
@@ -81,7 +101,7 @@ function Page() {
 					exit="hidden" 
 					className="flex flex-col w-full xl:max-w-[48%] h-[480px] pt-0 xl:pt-10 relative z-20">
 					<div className="flex gap-x-2 sm:gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
-						{aboutDataRu.map((item, i) => (
+						{aboutData.map((item, i) => (
 							<div
 								key={i}
 								onClick={() => setIndex(i)}
@@ -93,7 +113,7 @@ function Page() {
 						))}
 					</div>
 					<div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
-						{aboutDataRu[index].info.map((item, index) =>
+						{aboutData[index].info.map((item, index) =>
 						<div 
 							key={index}
 							className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"

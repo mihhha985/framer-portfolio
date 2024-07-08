@@ -13,7 +13,7 @@ export default function Template({ children }) {
 		<AnimatePresence mode="wait">
 			<motion.div 
 				key={pathname}			  		
-				className="h-full">
+				className="h-full w-full">
 				<Transition />
 				<div className="page bg-site text-white bg-cover bg-no-repeat font-sora relative">
 					<Nav />
